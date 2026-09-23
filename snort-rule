@@ -1,3 +1,2 @@
 # detect icmp packets from specified ip
-alert icmp any -> 192.168.0.121 any ( msg:"someone is pinging";  sid:1000001; rev:1; )
-
+alert icmp 10.0.0.69 any -> 10.0.0.96 any ( msg:"Someone is pinging";  sid:1000001; rev:1; )
