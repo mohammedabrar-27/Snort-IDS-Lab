@@ -1,2 +1,13 @@
 # detect icmp packets from specified ip
 alert icmp 10.0.0.69 any -> 10.0.0.96 any ( msg:"Someone is pinging";  sid:1000001; rev:1; )
+# Snort Rule Configuration
+
+### 1. Create the Rule
+
+Open the local Snort rules file:
+
+# bash
+sudo nano /etc/snort/rules/local.rules
+# add the rule and save the file 
+# now enter the command to see alert that are generated
+sudo snort -q -A console -i enp0s3 -c etc/snort/snort.conf
